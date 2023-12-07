@@ -2,11 +2,14 @@ def suma_de_digitos_potencia(n, potencia):
     return sum(int(digito) ** potencia for digito in str(n))
 
 def es_numero_feliz(num, objetivo, potencia):
-    numeros_vistos = set()
-    while num != objetivo and num not in numeros_vistos:
-        numeros_vistos.add(num)
-        num = suma_de_digitos_potencia(num, potencia)
-    return num == objetivo
+    tortuga = num
+    liebre = suma_de_digitos_potencia(num, potencia)
+
+    while tortuga != liebre and liebre != objetivo:
+        tortuga = suma_de_digitos_potencia(tortuga, potencia)
+        liebre = suma_de_digitos_potencia(suma_de_digitos_potencia(liebre, potencia), potencia)
+
+    return liebre == objetivo
 
 def generar_numeros_felices(cantidad, objetivo=1, potencia=2):
     numeros_felices = []
