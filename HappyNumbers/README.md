@@ -1,7 +1,7 @@
 # Ejercicio 1 – Happy Numbers 😄
 
 ## Descripción
-El objetivo de este ejercicio es implementar un programa que imprima los X primeros "happy numbers". La definición de "happy numbers" se puede encontrar en Wikipedia.
+El objetivo de este ejercicio es implementar un programa que imprima los X primeros "happy numbers".
 
 ## Requerimientos
 Impresión de los X primeros "happy numbers": El programa debe imprimir los primeros X "happy numbers".
